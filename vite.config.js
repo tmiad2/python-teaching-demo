@@ -13,6 +13,8 @@ export default defineConfig({
                 problem1: resolve(__dirname, 'problem1.html'),
                 problem2code: resolve(__dirname, 'problem2code.html'),
                 problem2: resolve(__dirname, 'problem2.html'),
+                problem3code: resolve(__dirname, 'problem3code.html'),
+                problem3: resolve(__dirname, 'problem3.html'),
             },
         },
     },

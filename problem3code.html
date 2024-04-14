@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Problem 3 code</title>
+  </head>
+<!-- >
+def solution(s):
+    for string in NAS_strings:
+      s=s.replace(string, "*"*len(string))
+    return s
+
+<!-->
+  <body>
+  <div id="code-container">
+    <div id="editor"></div>
+    <div id="description">
+    Using the list of NAS(Neo Australian Slang) strings in the variable `NAS_strings` which is just a python list in the global scope,  replace any instances of the strings in a given string `s` with asterisks(as many as there are letters in the word). For this problem feel free to just do string replacement again.  You may already be able to guess that there is going to be some issues arising from doing the obvious thing, but let's do it anyway(we could use the tokens). For now assume all text is lowercase.
+
+    <pre>
+*NAS reference for polite company*
+
+    Frak: A digital glitch or malfunction.
+    Slitch: A virtual shortcut or workaround.
+    Smaz: A harmless digital anomaly.
+    Frit: A small glitch or disruption in virtual reality.
+    Snaff: To quickly acquire or obtain something digitally.
+    Sproff: A playful term for a digital hiccup or error.
+    Blitz: A burst of high-speed digital activity.
+    Scrog: To organize or arrange data in a digital system.
+    Snirt: A minor technical issue in a virtual environment.
+    Skrump: To compress or condense digital files for storage.
+    </pre>
+    </div>
+    <button id="run">Run</button>
+
+    <textarea id="output" disabled></textarea>
+    </div>
+  </body>
+  <script type="module" src="./main3.js"></script>
+</html>
+

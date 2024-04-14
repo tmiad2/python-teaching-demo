@@ -5,8 +5,6 @@ import {python} from "@codemirror/lang-python"
 import { oneDark } from "@codemirror/theme-one-dark";
 
 const doc = `
-from urllib.parse import urlparse, urlunparse
-
 def solution(s):
     pass
 `
@@ -42,11 +40,38 @@ async function main() {
 import unittest
 class TestStringMethods(unittest.TestCase):
     def runTest(self):
-        self.assertEqual(solution('https://www.twitter.com'), 'https://www.x.com')
-        self.assertEqual(solution('https://witter.com'),'https://witter.com')
-        self.assertEqual(solution('https://www.netflitwitter.com'),'https://www.netflitwitter.com')
-        self.assertEqual(solution('https://twitter.com.gmail.com'),'https://twitter.com.gmail.com')
+        test_sentences = [
+            "We encountered a frak in the system, but it should be fixed shortly.",
+            "I found a slitch that allows us to bypass the security protocol.",
+            "Ignore that smaz on the screen, it's just a minor glitch.",
+            "The VR headset is acting frit again; I might need to recalibrate it.",
+            "Let me snaff that file from the server real quick.",
+            "Don't worry about the sproff, it's just a temporary hiccup.",
+            "The data transfer rate was incredible; it was like a blitz of information.",
+            "I'll scrog these files into a more organized format for easier access.",
+            "We encountered a snirt during the upload process, but it's nothing major.",
+            "I'll skrump these large files to save space on the server."
+        ]
+        clean_sentences = [
+            "We encountered a **** in the system, but it should be fixed shortly.",
+            "I found a ****** that allows us to bypass the security protocol.",
+            "Ignore that **** on the screen, it's just a minor glitch.",
+            "The VR headset is acting **** again; I might need to recalibrate it.",
+            "Let me ***** that file from the server real quick.",
+            "Don't worry about the ******, it's just a temporary hiccup.",
+            "The data transfer rate was incredible; it was like a ***** of information.",
+            "I'll ***** these files into a more organized format for easier access.",
+            "We encountered a ***** during the upload process, but it's nothing major.",
+            "I'll ****** these large files to save space on the server."
+        ]
+        for i in range(len(test_sentences)):
+            self.assertEqual(solution(test_sentences[i]), clean_sentences[i])
+
+
 test = TestStringMethods()
+
+NAS_strings =['bytebite', 'frak', 'slitch', 'smaz', 'frit', 'snaff', 'blitz', 'holostriders', 'sproff', 'scrog','snirt', 'skrump']
+
 `)
     return pyodide;
 }
