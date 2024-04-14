@@ -1,0 +1,22 @@
+{
+  "name": "demo-lesson",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "@codemirror/commands": "^6.3.3",
+    "@codemirror/lang-python": "^6.1.5",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "codemirror": "^6.0.1",
+    "codemirror-elements": "^0.0.8"
+  }
+}
