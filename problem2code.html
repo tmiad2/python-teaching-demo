@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Problem 2 code</title>
+  </head>
+<!-- >
+from urllib.parse import urlparse, urlunparse
+
+def solution(s):
+  o = urlparse(s)
+  netloc = o.netloc
+  parts = netloc.split('.')
+  if parts[-2] == 'twitter':
+    parts[-2] = 'x'
+  netloc = '.'.join(parts)
+  o = o._replace(netloc = netloc)
+  return urlunparse(o)
+<!-->
+  <body>
+  <div id="code-container">
+    <div id="editor"></div>
+    <div id="description">
+    Looks like simple string replacement isn't a good fit for this problem.  This time try using urllib <a href="https://docs.python.org/3/library/urllib.parse.html#url-parsing">Python documentation</a>. Believe it or not, this was a very real problem recently for <a href="https://arstechnica.com/tech-policy/2024/04/elon-musks-x-botched-an-attempt-to-replace-twitter-com-links-with-x-com/">Twitter/X </a>.
+    </div>
+    <button id="run">Run</button>
+
+    <textarea id="output" disabled></textarea>
+    </div>
+  </body>
+  <script type="module" src="./main2.js"></script>
+</html>
+
