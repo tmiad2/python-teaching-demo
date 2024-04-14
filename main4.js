@@ -41,36 +41,34 @@ import unittest
 class TestStringMethods(unittest.TestCase):
     def runTest(self):
         test_sentences = [
-            "We encountered a frak in the system, but it should be fixed shortly.",
-            "I found a slitch that allows us to bypass the security protocol.",
-            "Ignore that smaz on the screen, it's just a minor glitch.",
-            "The VR headset is acting frit again; I might need to recalibrate it.",
-            "Let me snaff that file from the server real quick.",
-            "Don't worry about the sproff, it's just a temporary hiccup.",
-            "The data transfer rate was incredible; it was like a blitz of information.",
-            "I'll scrog these files into a more organized format for easier access.",
-            "We encountered a snirt during the upload process, but it's nothing major.",
-            "I'll skrump these large files to save space on the server."
+            "The jazz band played a smazzy rendition of 'Summertime'.",
+            "The smell of freshly baked scones wafted through the smaze of the city streets.",
+            "She found herself in a smazzy boutique, surrounded by designer handbags and shoes.",
+            "The excitement was palpable as the crowd awaited the unveiling of the new smartphone at the SmazCorp event.",
+            "His smazzy haircut caught everyone's attention as he walked into the room.",
+            "The aroma of sizzling bacon filled the air, mingling with the smaze of morning fog.",
+            "The Smaztastic Adventures of Captain Smazula was a popular comic book series in the 80s.",
+            "The street was lined with smazzy neon signs advertising the latest gadgets.",
+            "The smazzy sports car turned heads as it sped down the highway.",
+            "She smirked and said, 'You're in for a smaz of a surprise.'"
         ]
-        clean_sentences = [
-            "We encountered a **** in the system, but it should be fixed shortly.",
-            "I found a ****** that allows us to bypass the security protocol.",
-            "Ignore that **** on the screen, it's just a minor glitch.",
-            "The VR headset is acting **** again; I might need to recalibrate it.",
-            "Let me ***** that file from the server real quick.",
-            "Don't worry about the ******, it's just a temporary hiccup.",
-            "The data transfer rate was incredible; it was like a ***** of information.",
-            "I'll ***** these files into a more organized format for easier access.",
-            "We encountered a ***** during the upload process, but it's nothing major.",
-            "I'll ****** these large files to save space on the server."
+        res = [
+            False,
+            False,
+            False,
+           False,
+            False,
+            False,
+            False,
+            False,
+            False,
+           True,
         ]
         for i in range(len(test_sentences)):
-            self.assertEqual(solution(test_sentences[i]), clean_sentences[i])
+            self.assertEqual(solution(test_sentences[i]), res[i])
 
 
 test = TestStringMethods()
-
-NAS_strings =['bytebite', 'frak', 'slitch', 'smaz', 'frit', 'snaff', 'blitz', 'holostriders', 'sproff', 'scrog','snirt', 'skrump']
 
 `)
     return pyodide;
@@ -103,7 +101,7 @@ else:
             var buttonNext = document.createElement("a");
             var body = document.getElementsByTagName("body")[0];
             buttonNext.innerHTML = "Next";
-            buttonNext.href='./problem4.html'
+            buttonNext.href='./problem5.html'
             buttonNext.style.width = '200px'; // setting the width to 200px
             buttonNext.style.height = '200px'; // setting the height to 200px
             buttonNext.style.background = 'teal'; // setting the background color to teal

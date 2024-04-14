@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Problem 3 code</title>
+  </head>
+<!-- >
+def solution(s):
+    for string in NAS_strings:
+      s=s.replace(string, "*"*len(string))
+    return s
+
+<!-->
+  <body>
+  <div id="code-container">
+    <div id="editor"></div>
+    <div id="description">
+    This is where things get harder. Let's make the problem a bit simpler. Your input is a string which may or may not contain a substring `smaz`. Check if there is a complete word that equals `smaz` with any casing and if so return  `True`. If there isn't a complete word that equals `smaz` then return `False`.  Here a complete word is any string of alphabetic letters.
+    </div>
+    <button id="run">Run</button>
+
+    <textarea id="output" disabled></textarea>
+    </div>
+  </body>
+  <script type="module" src="./main4.js"></script>
+</html>
+
