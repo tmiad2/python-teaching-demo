@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Problem 5 code</title>
+  </head>
+<!-- >
+
+def solution(s):
+  out = set()
+  count = len(s)
+  cur = 0
+  while cur < count:
+    if s[cur].isalpha():
+      temp = ''
+      while s[cur].isalpha() or s[cur].isdigit() or s[cur] =='_':
+        temp += s[cur]
+        cur +=1
+      if s[cur] == '(':
+        out.add(temp)
+        cur +=1
+      continue
+    else:
+      cur +=1
+  return out
+<!-->
+  <body>
+  <div id="code-container">
+    <div id="editor"></div>
+    <div id="description">
+For this task you will need to identify function calls.  The strings you will recieve will be expressions like `1+ a+ 7*(13+8)+func(value1,23, 24);` so there will be some `variables` like `a` or `variable_name2`, `function calls` like `function_name()` where there is a valid identifier(at least one alphabetic letter followed by any mixture of alphabetic letters, numbers, and underscores) followed by an open parentheses, and `numbers` which are just strings of decimal digits.  The input will be a string and the output will be a set of all identifiers which represent functions called in the string. If there are no function calls, return an empty set.
+
+<pre>
+Exmaples :
+1. `4+3/a`
+   - Functions called: ``
+
+2. `(3 + 4) * 2 - (foo(5) / bar)`
+   - Functions called: `foo`
+
+3. `foo(bar(3) + baz(2), qux())`
+   - Functions called: `foo`, `bar`, `baz`, `qux`
+
+4. `sin(cos(PI / 4)) + log(sqrt(25))`
+   - Functions called: `sin`, `cos`, `log`, `sqrt`
+
+5. `max(min(x, y), abs(z)) / factorial(fibonacci(8))`
+   - Functions called: `max`, `min`, `abs`, `factorial`, `fibonacci`
+
+6. `sqrt(exp(log(10))) - pow(2, pow(3, 2))`
+   - Functions called: `sqrt`, `exp`, `log`, `pow`
+    </pre>
+    </div>
+    <button id="run">Run</button>
+
+    <textarea id="output" disabled></textarea>
+    </div>
+  </body>
+  <script type="module" src="./main5.js"></script>
+</html>
+
