@@ -51,6 +51,7 @@ height: 100vh;
 #output{
 height: 100%;
 grid-area: output;
+font-size: 20px;
 }
 
 #editor{

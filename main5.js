@@ -10,6 +10,9 @@ def solution(s):
     return out
 `
 
+const output = document.getElementById("output");
+
+
 editor = new EditorView({
     doc,
     extensions: [
@@ -20,7 +23,6 @@ editor = new EditorView({
     parent: document.querySelector("#editor")
 })
 
-const output = document.getElementById("output");
 
 function addToOutput(s) {
     if(s == null){
@@ -67,7 +69,10 @@ class TestStringMethods(unittest.TestCase):
 
         ]
         for i in range(len(test_sentences)):
+            print("Input: ", test_sentences[i])
+            print("Expected Output: ", res[i])
             self.assertEqual(solution(test_sentences[i]), res[i])
+            print("PASSED")
 
 
 test = TestStringMethods()
@@ -103,7 +108,7 @@ else:
             var buttonNext = document.createElement("a");
             var body = document.getElementsByTagName("body")[0];
             buttonNext.innerHTML = "Next";
-            buttonNext.href='./problem5.html'
+            buttonNext.href='./problem6.html'
             buttonNext.style.width = '200px'; // setting the width to 200px
             buttonNext.style.height = '200px'; // setting the height to 200px
             buttonNext.style.background = 'teal'; // setting the background color to teal

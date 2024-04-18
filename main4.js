@@ -65,7 +65,10 @@ class TestStringMethods(unittest.TestCase):
            True,
         ]
         for i in range(len(test_sentences)):
+            print("Input: ", test_sentences[i])
+            print("Expected Output: ", res[i])
             self.assertEqual(solution(test_sentences[i]), res[i])
+            print("PASSED")
 
 
 test = TestStringMethods()

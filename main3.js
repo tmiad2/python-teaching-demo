@@ -65,7 +65,10 @@ class TestStringMethods(unittest.TestCase):
             "I'll ****** these large files to save space on the server."
         ]
         for i in range(len(test_sentences)):
-            self.assertEqual(solution(test_sentences[i]), clean_sentences[i])
+            print("Input: ", test_sentences[i])
+            print("Expected Output: ", res[i])
+            self.assertEqual(solution(test_sentences[i]), res[i])
+            print("PASSED")
 
 
 test = TestStringMethods()

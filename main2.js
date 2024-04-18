@@ -42,10 +42,14 @@ async function main() {
 import unittest
 class TestStringMethods(unittest.TestCase):
     def runTest(self):
-        self.assertEqual(solution('https://www.twitter.com'), 'https://www.x.com')
-        self.assertEqual(solution('https://witter.com'),'https://witter.com')
-        self.assertEqual(solution('https://www.netflitwitter.com'),'https://www.netflitwitter.com')
-        self.assertEqual(solution('https://twitter.com.gmail.com'),'https://twitter.com.gmail.com')
+        test_sentences = ['https://www.twitter.com','https://witter.com','https://www.netflitwitter.com','https://twitter.com.gmail.com']
+        res = ['https://www.x.com','https://witter.com','https://www.netflitwitter.com','https://twitter.com.gmail.com']
+        for i in range(len(test_sentences)):
+            print("Input: ", test_sentences[i])
+            print("Expected Output: ", res[i])
+            self.assertEqual(solution(test_sentences[i]), res[i])
+            print("PASSED")
+
 test = TestStringMethods()
 `)
     return pyodide;
